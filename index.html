@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>InstaBeast</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-otter"></i> InstaBeast</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse gap-2 justify-content-end" id="navbarSupportedContent">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create new post 
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Caption:
+                                <textarea class="form-control" id="message-text"
+                                    placeholder="Add the caption of the new pots here"></textarea>
+                                <div>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="fa-solid fa-location-dot"></i></button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tabs -->
+    <!-- tabs centrada -->
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                    class="fa-solid fa-square"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                    class="fa-solid fa-grip"></i></button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+            tabindex="0">
+            <div class="container-fluid">
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Drifting Panda</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body  p-0">
+                            <img src="https://i.imgur.com/MwAgNjT.jpeg" class="img-fluid"  alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">2057861 Liked</p>
+                            <p class="card-text">Derrapando voy 🏲🚦</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Caviar Monkey</p>
+                            <p class="data ms-auto">06/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/h6IEMDA.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">2857 Liked</p>
+                            <p class="card-text">El mejor caviar del mundo. Prodado por monos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">HipoFamily</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/VarKnP6.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">8751 Liked</p>
+                            <p class="card-text">La cenas son mejor en familia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Golden Bird</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/JAENi84.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">1008751 Liked</p>
+                            <p class="card-text">Siempre vuela alto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">🍣Sushi Kitten🍣</p>
+                            <p class="data ms-auto">06/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/5zaf1Um.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">587952857 Liked</p>
+                            <p class="card-text">Ven y pruebalo. 🍣</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Suit Tigre</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/hGHOIGD.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">789542 Liked</p>
+                            <p class="card-text">💵💵Haciendo millones💵💵</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Squirrel gambing</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/Qv0aZaX.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">10 Liked</p>
+                            <p class="card-text">Vuoi giocare a un gioco?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Relax Coco</p>
+                            <p class="data ms-auto">06/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/n7WWqZF.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">2857 Liked</p>
+                            <p class="card-text">Ralajate y pegate en el trip</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Grandpas</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/32aiVAY.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">87 Liked</p>
+                            <p class="card-text">Jugando con Jose Ramón</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">True Aminals Detetive</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/9jbevEz.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">1008751 Liked</p>
+                            <p class="card-text">Caso 1: Muerte en el callejón🔍🕱</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Rana saltarina</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/xE3NCvI.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">1008751 Liked</p>
+                            <p class="card-text">Record mundial de salto ranistico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2">
+                    <div class="card mx-auto col-md-6 col-12">
+                        <div class="card-header d-flex">
+                            <p class="title fw-bold">Surfing pingui</p>
+                            <p class="data ms-auto">08/11</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://i.imgur.com/bnLWjfy.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="card-footer">
+                            <p class="liked fw-bold">1008751 Liked</p>
+                            <p class="card-text">🌊🌊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tab grid -->
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/MwAgNjT.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover" src="https://i.imgur.com/h6IEMDA.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/VarKnP6.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/JAENi84.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover" src="https://i.imgur.com/5zaf1Um.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/hGHOIGD.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/Qv0aZaX.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover" src="https://i.imgur.com/n7WWqZF.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/32aiVAY.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/9jbevEz.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover" src="https://i.imgur.com/xE3NCvI.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-2">
+                    <div class="ratio ratio-1x1">
+                        <img class="w-100 h-100 object-fit-cover"  src="https://i.imgur.com/bnLWjfy.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
